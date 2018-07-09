@@ -16,3 +16,5 @@ web/
 # examples
 examples/native/
 examples/web/
+
+.DS_Store
