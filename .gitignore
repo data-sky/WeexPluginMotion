@@ -64,3 +64,5 @@ iOSInjectionProject/
 
 # weex plugin
 node_modules/
+
+.DS_Store
