@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "WeexPluginMotion"
-  s.version      = "0.1.0"
+  s.version      = "0.1"
   s.summary      = "一个运动相关weex扩展"
 
   s.description  = <<-DESC
