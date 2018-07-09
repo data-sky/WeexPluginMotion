@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "WeexPluginMotion"
-  s.version      = "0.1"
+  s.version      = "0.1.1"
   s.summary      = "一个运动相关weex扩展"
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source       = { :git => 'https://github.com/data-sky/WeexPluginMotion.git', :tag => 's.version' }
+  s.source       = { :git => 'https://github.com/data-sky/WeexPluginMotion.git', :tag => s.version }
   s.source_files  = "ios/Sources/*.{h,m,mm}"
   
   s.requires_arc = true
