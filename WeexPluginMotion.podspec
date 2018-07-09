@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "WeexPluginMotion"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "一个运动相关weex扩展"
 
   s.description  = <<-DESC
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/Sources/*.{h,m,mm}"
   
   s.requires_arc = true
-  # s.dependency "WeexPluginLoader"
+  s.dependency "WeexPluginLoader"
   s.dependency "WeexSDK"
 end
