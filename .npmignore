@@ -1,0 +1,18 @@
+examples
+coverage
+docs
+node_modules/*
+
+test
+
+.editorconfig
+.esdocrc
+.eslintrc
+
+dist/
+playground/
+web/
+
+# examples
+examples/native/
+examples/web/
