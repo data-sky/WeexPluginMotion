@@ -63,15 +63,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 # weex plugin
-android/
-build/
-configs/
-examples/
-ios/WeexPluginMotion.xcworkspace
 node_modules/
-playground/
-src/
-package.json
-package-lock.json
-webpack.config.js
-start
