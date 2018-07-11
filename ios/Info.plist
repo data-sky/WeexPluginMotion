@@ -18,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSMotionUsageDescription</key>
+	<string>App需要您的同意,才能访问运动与健身</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>

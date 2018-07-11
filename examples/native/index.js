@@ -129,7 +129,7 @@ module.exports = {
     "marginTop": "20",
     "lineHeight": "80",
     "fontSize": "36",
-    "color": "#41B883"
+    "color": "#41b883"
   },
   "message": {
     "marginTop": "70",
@@ -201,16 +201,27 @@ module.exports = {
 //
 //
 //
+//
+//
+//
+//
+//
 
 
-var weexPluginMotion = weex.requireModule('weexPluginMotion');
+var weexPluginMotion = weex.requireModule('motion');
 module.exports = {
 	data: {
 		logo: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png'
 	},
 	methods: {
 		createAction: function createAction() {
-			weexPluginMotion.show();
+			weexPluginMotion.getTodayStepCount(function (params) {
+				if (params.result) {
+					console.log('当前步数：', params.numberOfSteps);
+				} else {
+					console.log('获取步数失败：', params.message);
+				}
+			});
 		}
 	}
 };
@@ -240,8 +251,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       color: "#fff"
     }
-  }, [_vm._v("Click Me!")])])])
-},staticRenderFns: []}
+  }, [_vm._v("Click Me!")])]), _vm._m(0)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('text', [_vm._v("aaaaa")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ })

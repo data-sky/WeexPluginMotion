@@ -14,17 +14,17 @@
     "prepublish": "npm run lint && npm run build"
   },
   "web": {
-    "name": "weex-plugin-lottie",
-    "version": "0.1.1"
+    "name": "weex-plugin-motion",
+    "version": "0.2"
   },
   "android": {
-    "name": "WXLottie",
+    "name": "WeexPluginMotion",
     "dependency": "org.asialee.weex:weexplugin:1.0.2"
   },
   "ios": {
     "type": "pod",
-    "name": "WXLottie",
-    "version": "1.0"
+    "name": "WeexPluginMotion",
+    "version": "0.2"
   },
   "keywords": [
     "weex",
