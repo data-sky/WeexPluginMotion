@@ -13,6 +13,7 @@
 <key>NSMotionUsageDescription</key>
 <string>App需要您的同意,才能访问运动与健身</string> 
 ```
+*另，由于 `CoreMotion` 只支持获取最近7天的运动数据，所以这个扩展获取的数据也最多只有最近7天。*
 
 ## 安装
 
@@ -35,7 +36,8 @@ const motion = weex.requireModule('motion')
 ```
 
 ## API
-1. 获取当天步数。
+
+### 获取当天步数。
 
 示例
 
@@ -54,7 +56,7 @@ motion.getTodayStepCount(params => {
 * `message (String)`: 获取数据失败的原因描述。
 * `numberOfSteps (Number)`: 用户的步数。
 
-2. 获取某个时间段内的步数。
+### 获取某个时间段内的步数。
 
 示例
 
@@ -80,7 +82,7 @@ motion.getStepCount({
 * `message (String)`: 获取数据失败的原因描述。
 * `numberOfSteps (Number)`: 用户的步数。
 
-3. 获取某个时间段内的运动相关数据。
+### 获取某个时间段内的运动相关数据。
 
 示例
 
