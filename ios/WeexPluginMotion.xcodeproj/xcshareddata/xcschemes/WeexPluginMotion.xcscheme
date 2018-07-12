@@ -20,6 +20,20 @@
                ReferencedContainer = "container:WeexPluginMotion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "535DBAC220F71C00003AA396"
+               BuildableName = "WeexPluginMotionTests.xctest"
+               BlueprintName = "WeexPluginMotionTests"
+               ReferencedContainer = "container:WeexPluginMotion.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,6 +43,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C45843E31E84EF5B00D88C0B"
+            BuildableName = "WeexPluginMotion.framework"
+            BlueprintName = "WeexPluginMotion"
+            ReferencedContainer = "container:WeexPluginMotion.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
