@@ -46,21 +46,56 @@
 
 <script>
 
-const weexPluginMotion = weex.requireModule('motion');
+const motion = weex.requireModule('motion');
 module.exports = {
 	data: {
 		logo: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
 	},
 	methods: {
 		createAction: function () {
-			weexPluginMotion.getStepCount({
-				start: new Date(),
-				end: new Date()
+			const now = new Date()
+			const year = now.getFullYear()
+			const month = now.getMonth()
+			const date = now.getDate()
+
+			const startDate = new Date(year, month, date)
+			const endDate = new Date()
+
+			motion.getTodayStepCount(params => {
+				if (params.success) {
+					console.log('当前今天步数：', params.numberOfSteps);
+				} else {
+					console.log('获取今天步数失败：', params.message);
+				}
+			});
+
+			motion.getStepCount({
+				startDate: startDate,
+				endDate: endDate
 			}, params => {
-				if (params.result) {
+				if (params.success) {
 					console.log('当前步数：', params.numberOfSteps);
 				} else {
 					console.log('获取步数失败：', params.message);
+				}
+			});
+
+			motion.getStepCount({}, params => {
+				if (params.success) {
+					console.log('所有步数：', params.numberOfSteps);
+				} else {
+					console.log('获取所有步数失败：', params.message);
+				}
+			});
+
+			motion.getPedometerData({
+				startDate: startDate,
+				endDate: endDate
+			}, params => {
+				if (params.success) {
+					console.log('当前运动数据：', JSON.stringify(params, null, 4));
+				} else {
+					console.log('获取运动数据失败：', params.message);
 				}
 			});
 		}
