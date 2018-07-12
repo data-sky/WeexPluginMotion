@@ -7,29 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		535DBAC620F71C00003AA396 /* WeexPluginMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 535DBAC520F71C00003AA396 /* WeexPluginMotionTests.m */; };
-		535DBAC820F71C00003AA396 /* WeexPluginMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45843E41E84EF5B00D88C0B /* WeexPluginMotion.framework */; };
 		8E411A5313F5223DD58700FD /* libPods-WeexPluginMotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AACF232813205670B6CAA1D /* libPods-WeexPluginMotion.a */; };
 		C45843FC1E84F39100D88C0B /* WeexPluginMotionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = C45843F61E84F39100D88C0B /* WeexPluginMotionModule.h */; };
 		C45843FD1E84F39100D88C0B /* WeexPluginMotionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C45843F71E84F39100D88C0B /* WeexPluginMotionModule.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		535DBAC920F71C00003AA396 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C45843DB1E84EF5B00D88C0B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C45843E31E84EF5B00D88C0B;
-			remoteInfo = WeexPluginMotion;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0F1C92092FF9562A4B475501 /* Pods-WeexPluginMotion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginMotion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginMotion/Pods-WeexPluginMotion.debug.xcconfig"; sourceTree = "<group>"; };
 		1AACF232813205670B6CAA1D /* libPods-WeexPluginMotion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeexPluginMotion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		535DBAC320F71C00003AA396 /* WeexPluginMotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeexPluginMotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		535DBAC520F71C00003AA396 /* WeexPluginMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeexPluginMotionTests.m; sourceTree = "<group>"; };
-		535DBAC720F71C00003AA396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		535DBACE20F71FBA003AA396 /* libPods-WeexPluginMotion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-WeexPluginMotion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F9AEB97654FF7EEA032F16 /* Pods-WeexPluginMotion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexPluginMotion.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeexPluginMotion/Pods-WeexPluginMotion.release.xcconfig"; sourceTree = "<group>"; };
 		C45843E41E84EF5B00D88C0B /* WeexPluginMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeexPluginMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,14 +24,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		535DBAC020F71C00003AA396 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				535DBAC820F71C00003AA396 /* WeexPluginMotion.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C45843E01E84EF5B00D88C0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,21 +44,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		535DBAC420F71C00003AA396 /* WeexPluginMotionTests */ = {
-			isa = PBXGroup;
-			children = (
-				535DBAC520F71C00003AA396 /* WeexPluginMotionTests.m */,
-				535DBAC720F71C00003AA396 /* Info.plist */,
-			);
-			path = WeexPluginMotionTests;
-			sourceTree = "<group>";
-		};
 		C45843DA1E84EF5B00D88C0B = {
 			isa = PBXGroup;
 			children = (
 				C45843F11E84F39000D88C0B /* Sources */,
 				C45843EF1E84EF7B00D88C0B /* Info.plist */,
-				535DBAC420F71C00003AA396 /* WeexPluginMotionTests */,
 				C45843E51E84EF5B00D88C0B /* Products */,
 				DCA0321F3AC057FF2A8C84CB /* Pods */,
 				248CB2E7B700A3049EE0727E /* Frameworks */,
@@ -92,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				C45843E41E84EF5B00D88C0B /* WeexPluginMotion.framework */,
-				535DBAC320F71C00003AA396 /* WeexPluginMotionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,24 +95,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		535DBAC220F71C00003AA396 /* WeexPluginMotionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 535DBACB20F71C00003AA396 /* Build configuration list for PBXNativeTarget "WeexPluginMotionTests" */;
-			buildPhases = (
-				535DBABF20F71C00003AA396 /* Sources */,
-				535DBAC020F71C00003AA396 /* Frameworks */,
-				535DBAC120F71C00003AA396 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				535DBACA20F71C00003AA396 /* PBXTargetDependency */,
-			);
-			name = WeexPluginMotionTests;
-			productName = WeexPluginMotionTests;
-			productReference = 535DBAC320F71C00003AA396 /* WeexPluginMotionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C45843E31E84EF5B00D88C0B /* WeexPluginMotion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C45843EC1E84EF5C00D88C0B /* Build configuration list for PBXNativeTarget "WeexPluginMotion" */;
@@ -176,10 +124,6 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = weexplugin;
 				TargetAttributes = {
-					535DBAC220F71C00003AA396 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-					};
 					C45843E31E84EF5B00D88C0B = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
@@ -199,19 +143,11 @@
 			projectRoot = "";
 			targets = (
 				C45843E31E84EF5B00D88C0B /* WeexPluginMotion */,
-				535DBAC220F71C00003AA396 /* WeexPluginMotionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		535DBAC120F71C00003AA396 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C45843E21E84EF5B00D88C0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,14 +199,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		535DBABF20F71C00003AA396 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				535DBAC620F71C00003AA396 /* WeexPluginMotionTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C45843DF1E84EF5B00D88C0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,53 +209,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		535DBACA20F71C00003AA396 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C45843E31E84EF5B00D88C0B /* WeexPluginMotion */;
-			targetProxy = 535DBAC920F71C00003AA396 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		535DBACC20F71C00003AA396 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WeexPluginMotionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luwei.WeexPluginMotionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		535DBACD20F71C00003AA396 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WeexPluginMotionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luwei.WeexPluginMotionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		C45843EA1E84EF5C00D88C0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,15 +365,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		535DBACB20F71C00003AA396 /* Build configuration list for PBXNativeTarget "WeexPluginMotionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				535DBACC20F71C00003AA396 /* Debug */,
-				535DBACD20F71C00003AA396 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C45843DE1E84EF5B00D88C0B /* Build configuration list for PBXProject "WeexPluginMotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
