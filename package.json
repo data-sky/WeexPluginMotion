@@ -15,7 +15,7 @@
   },
   "web": {
     "name": "weex-plugin-motion",
-    "version": "0.2"
+    "version": "0.2.1"
   },
   "android": {
     "name": "WeexPluginMotion",
@@ -24,7 +24,7 @@
   "ios": {
     "type": "pod",
     "name": "WeexPluginMotion",
-    "version": "0.2"
+    "version": "0.2.1"
   },
   "keywords": [
     "weex",
