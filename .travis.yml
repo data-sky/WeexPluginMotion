@@ -4,3 +4,5 @@ osx_image: xcode9.4
 xcode_workspace: ios/WeexPluginMotion.xcworkspace
 xcode_scheme: WeexPluginMotion
 podfile: ios/Podfile
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace ios/WeexPluginMotion.xcworkspace -scheme WeexPluginMotion CODE_SIGNING_REQUIRED=NO
