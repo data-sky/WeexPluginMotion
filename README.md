@@ -1,4 +1,6 @@
 # WeexPluginMotion
+[![Build Status](https://travis-ci.org/data-sky/WeexPluginMotion.svg?branch=master)](https://travis-ci.org/data-sky/WeexPluginMotion)
+
 <!--[![Build Status](https://travis-ci.org/lw1024/SwiftCommons.svg?branch=master)](https://travis-ci.org/lw1024/SwiftCommons)
 [![Version](https://img.shields.io/cocoapods/v/SwiftCommons.svg?style=flat)](http://cocoapods.org/pods/SwiftCommons)
 [![License](https://img.shields.io/cocoapods/l/SwiftCommons.svg?style=flat)](http://cocoapods.org/pods/SwiftCommons)
