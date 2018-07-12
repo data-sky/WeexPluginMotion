@@ -54,7 +54,7 @@ WX_EXPORT_METHOD(@selector(getStepCount:callback:))
     id start = params[@"start"];
     id end = params[@"end"];
     
-    NSLog(@"%@ - %@", start, end);
+    NSLog(@"%@ - %@", start, end, [start className]);
     
     if (start == nil) {
         start = [NSDate dateWithTimeIntervalSinceNow:-(60 * 60 * 24 * 7)];

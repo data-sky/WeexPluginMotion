@@ -215,7 +215,10 @@ module.exports = {
 	},
 	methods: {
 		createAction: function createAction() {
-			weexPluginMotion.getTodayStepCount(function (params) {
+			weexPluginMotion.getStepCount({
+				start: new Date(),
+				end: new Date()
+			}, function (params) {
 				if (params.result) {
 					console.log('当前步数：', params.numberOfSteps);
 				} else {
