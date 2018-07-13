@@ -92,7 +92,7 @@ motion.getPedometerData({
   endDate: endDate
 }, params => {
   if (params.success) {
-    console.log('当前运动数据：', params.numberOfSteps)
+    console.log('当前运动数据：', JSON.stringify(params, null, 4));
   } else {
     console.log('获取运动数据失败：', params.message)
   }
