@@ -18,7 +18,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/data-sky/WeexPluginMotion.git', :tag => s.version }
   s.source_files  = "ios/Sources/*.{h,m,mm}"
   
+  s.frameworks = 'CoreMotion'
+  
   s.requires_arc = true
   s.dependency "WeexPluginLoader"
   s.dependency "WeexSDK"
+  
 end

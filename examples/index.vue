@@ -8,9 +8,37 @@
 		     class="button">
 			<text style="color:#fff">Click Me!</text>
 		</div>
+
 		<div>
-			<text>aaaaa</text>
+			<text>startDate: {{ pedometerData.startDate }}</text>
+			<text>endDate: {{ pedometerData.endDate }}</text>
+			<text>numberOfSteps: {{ pedometerData.numberOfSteps }}</text>
+			<text>distance: {{ pedometerData.distance }}m</text>
+			<text>floorsAscended: {{ pedometerData.floorsAscended }}</text>
+			<text>floorsDescended: {{ pedometerData.floorsDescended }}</text>
+			<text>currentPace: {{ pedometerData.currentPace }}s/m</text>
+			<text>currentCadence: {{ pedometerData.currentCadence }}</text>
+			<text>averageActivePace: {{ pedometerData.averageActivePace }}</text>
 		</div>
+
+		<div style="flex-direction: row;">
+			<div class="button"
+			     @click="getPedometerData">
+				<text style="color:#fff">今天的运动数据</text>
+			</div>
+		</div>
+
+		<div style="flex-direction: row;">
+			<div class="button"
+			     @click="startPedometerUpdates">
+				<text style="color:#fff">开始记录</text>
+			</div>
+			<div class="button"
+			     @click="stopPedometerUpdates">
+				<text style="color:#fff">停止记录</text>
+			</div>
+		</div>
+
 	</div>
 </template>
 
@@ -50,6 +78,7 @@ const motion = weex.requireModule('motion');
 module.exports = {
 	data: {
 		logo: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
+		pedometerData: {}
 	},
 	methods: {
 		createAction: function () {
@@ -98,6 +127,45 @@ module.exports = {
 					console.log('获取运动数据失败：', params.message);
 				}
 			});
+		},
+
+		getPedometerData () {
+			const now = new Date()
+			const year = now.getFullYear()
+			const month = now.getMonth()
+			const date = now.getDate()
+
+			const startDate = new Date(year, month, date)
+			const endDate = new Date()
+
+			motion.getPedometerData({
+				startDate: startDate,
+				endDate: endDate
+			}, params => {
+				if (params.success) {
+					console.log('当前运动数据：', JSON.stringify(params, null, 4));
+					this.pedometerData = params
+				} else {
+					console.log('获取运动数据失败：', params.message);
+				}
+			});
+		},
+
+		startPedometerUpdates () {
+			motion.startPedometerUpdates({
+				"date": new Date()
+			}, params => {
+				if (params.success) {
+					console.log('当前运动数据：', JSON.stringify(params, null, 4));
+					this.pedometerData = params
+				} else {
+					console.log('获取运动数据失败：', params.message);
+				}
+			});
+		},
+
+		stopPedometerUpdates () {
+			motion.stopPedometerUpdates()
 		}
 	}
 }

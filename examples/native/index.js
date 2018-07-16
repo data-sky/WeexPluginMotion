@@ -206,12 +206,41 @@ module.exports = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var motion = weex.requireModule('motion');
 module.exports = {
 	data: {
-		logo: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png'
+		logo: 'http://img1.vued.vanthink.cn/vued08aa73a9ab65dcbd360ec54659ada97c.png',
+		pedometerData: {}
 	},
 	methods: {
 		createAction: function createAction() {
@@ -260,6 +289,47 @@ module.exports = {
 					console.log('获取运动数据失败：', params.message);
 				}
 			});
+		},
+
+		getPedometerData: function getPedometerData() {
+			var _this = this;
+
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth();
+			var date = now.getDate();
+
+			var startDate = new Date(year, month, date);
+			var endDate = new Date();
+
+			motion.getPedometerData({
+				startDate: startDate,
+				endDate: endDate
+			}, function (params) {
+				if (params.success) {
+					console.log('当前运动数据：', JSON.stringify(params, null, 4));
+					_this.pedometerData = params;
+				} else {
+					console.log('获取运动数据失败：', params.message);
+				}
+			});
+		},
+		startPedometerUpdates: function startPedometerUpdates() {
+			var _this2 = this;
+
+			motion.startPedometerUpdates({
+				"date": new Date()
+			}, function (params) {
+				if (params.success) {
+					console.log('当前运动数据：', JSON.stringify(params, null, 4));
+					_this2.pedometerData = params;
+				} else {
+					console.log('获取运动数据失败：', params.message);
+				}
+			});
+		},
+		stopPedometerUpdates: function stopPedometerUpdates() {
+			motion.stopPedometerUpdates();
 		}
 	}
 };
@@ -289,10 +359,43 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       color: "#fff"
     }
-  }, [_vm._v("Click Me!")])]), _vm._m(0)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('text', [_vm._v("aaaaa")])])
-}]}
+  }, [_vm._v("Click Me!")])]), _c('div', [_c('text', [_vm._v("startDate: " + _vm._s(_vm.pedometerData.startDate))]), _c('text', [_vm._v("endDate: " + _vm._s(_vm.pedometerData.endDate))]), _c('text', [_vm._v("numberOfSteps: " + _vm._s(_vm.pedometerData.numberOfSteps))]), _c('text', [_vm._v("distance: " + _vm._s(_vm.pedometerData.distance) + "m")]), _c('text', [_vm._v("floorsAscended: " + _vm._s(_vm.pedometerData.floorsAscended))]), _c('text', [_vm._v("floorsDescended: " + _vm._s(_vm.pedometerData.floorsDescended))]), _c('text', [_vm._v("currentPace: " + _vm._s(_vm.pedometerData.currentPace) + "s/m")]), _c('text', [_vm._v("currentCadence: " + _vm._s(_vm.pedometerData.currentCadence))]), _c('text', [_vm._v("averageActivePace: " + _vm._s(_vm.pedometerData.averageActivePace))])]), _c('div', {
+    staticStyle: {
+      flexDirection: "row"
+    }
+  }, [_c('div', {
+    staticClass: ["button"],
+    on: {
+      "click": _vm.getPedometerData
+    }
+  }, [_c('text', {
+    staticStyle: {
+      color: "#fff"
+    }
+  }, [_vm._v("今天的运动数据")])])]), _c('div', {
+    staticStyle: {
+      flexDirection: "row"
+    }
+  }, [_c('div', {
+    staticClass: ["button"],
+    on: {
+      "click": _vm.startPedometerUpdates
+    }
+  }, [_c('text', {
+    staticStyle: {
+      color: "#fff"
+    }
+  }, [_vm._v("开始记录")])]), _c('div', {
+    staticClass: ["button"],
+    on: {
+      "click": _vm.stopPedometerUpdates
+    }
+  }, [_c('text', {
+    staticStyle: {
+      color: "#fff"
+    }
+  }, [_vm._v("停止记录")])])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 
 /***/ })
