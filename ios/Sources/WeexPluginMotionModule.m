@@ -152,7 +152,7 @@ static NSMutableDictionary * convertPedometerData(CMPedometerData *pedometerData
 }
 
 
-- (void)startPedometerUpdates:(NSDictionary *)params callback:(WXModuleCallback)callback {
+- (void)startPedometerUpdates:(NSDictionary *)params callback:(WXModuleKeepAliveCallback)callback {
     NSDate *start = params[@"date"];
     if (start == nil) {
         start = [NSDate date];
@@ -167,12 +167,12 @@ static NSMutableDictionary * convertPedometerData(CMPedometerData *pedometerData
             if (error) {
                 callback(@{@"success": @NO,
                            @"message": [error localizedDescription]
-                           });
+                           }, NO);
             } else {
                 NSMutableDictionary *result = [@{@"success": @YES} mutableCopy];
                 [result addEntriesFromDictionary:convertPedometerData(pedometerData)];
 
-                callback(result);
+                callback(result, NO);
             }
         }];
     } else {
@@ -182,6 +182,10 @@ static NSMutableDictionary * convertPedometerData(CMPedometerData *pedometerData
 
 - (void)stopPedometerUpdates {
     [self.pedometer stopPedometerUpdates];
+}
+
+- (NSThread *)targetExecuteThread {
+    return [WXComponentManager componentThread];
 }
 
 @end
