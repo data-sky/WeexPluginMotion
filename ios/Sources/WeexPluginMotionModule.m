@@ -161,6 +161,8 @@ static NSMutableDictionary * convertPedometerData(CMPedometerData *pedometerData
     NSLog(@"开始记录：%@", start);
     
     if (CMPedometer.isStepCountingAvailable) {
+//        __unsafe_unretained typeof(self) weakSelf = self;
+        
         [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
             NSLog(@"numberOfSteps: %@", pedometerData.numberOfSteps);
             

@@ -1,6 +1,6 @@
 /* globals alert */
 const weexPluginMotion = {
-  show() {
+  show () {
     alert('Module weexPluginMotion is created sucessfully ');
   }
 };
@@ -12,7 +12,7 @@ const meta = {
   }]
 };
 
-function init(weex) {
+function init (weex) {
   weex.registerModule('motion', weexPluginMotion, meta);
 }
 
